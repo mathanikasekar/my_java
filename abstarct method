@@ -1,0 +1,31 @@
+abstract class Ph 
+{
+  abstract void call();
+}
+class Ip extends Ph
+{
+    void call()
+    {
+        System.out.println("iphone");
+    }
+}
+class Sam extends Ph
+{
+    void call()
+    {
+        System.out.println("samsung");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Ip i=new Ip();
+		Sam s=new Sam();
+		Main.show(s);
+	}
+   public static void show( Ph obj)
+	{
+	    obj.call();
+	}
+}
