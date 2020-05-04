@@ -1,0 +1,42 @@
+JAVA
+ -James Gosling in 1995
+ -sun microsystems
+ -high level language
+ -object oriented language
+ -Oracle acquired Sun Microsystems in January, 2010.
+ - Java is now maintained and distributed by Oracle.
+ -File extensions: .JAVA, .JAV, .JAD, .JAR, .JSP, .CLASS
+
+features:
+
+ -open source
+      -free public access software
+ -high performance
+      -interpreted-just in time [JIT]compiler
+ -multi threading
+      -many task-utilizes the same memory and other resources to execute multiple threads at the same time,
+       like While typing, grammatical errors are checked along.
+ -secure
+       -enables us to develop virus-free, temper free system.
+       Java program always runs in Java runtime environment with almost null interaction with system OS,
+       hence it is more secure.
+ -platform independent
+      -write-once, run-anywhere language.
+      - On compilation, Java program is compiled into bytecode.
+       This bytecode is platform-independent
+       and can be run on any machine,
+       plus this bytecode format also provides security.
+       Any machine with Java Runtime Environment can run Java Programs.
+ -portable
+      -cross-platform feature.
+      -Programmers can write code in windows
+       and execute the same code in Linux Operating System.
+ -Object-Oriented
+       -In java, everything is an object
+       which has some data and behaviour.
+        Java can be easily extended as it is based on Object Model.
+ -Robust
+      -Java makes an effort to eliminate error-prone codes by emphasizing mainly on compile-time error checking and runtime checking.
+       But the main areas which Java improved were Memory Management and mishandled Exceptions by introducing automatic Garbage Collector and Exception Handling.
+
+        
