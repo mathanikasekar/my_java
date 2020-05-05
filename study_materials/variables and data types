@@ -1,0 +1,59 @@
+VARIABLES:
+-piece of memory used to  store a data value.
+-in java,it is a memeber of class.
+
+TYPES:
+Local variable
+Instance variable
+Class/Static variable
+
+LOCAL VARIABLE:
+  declared within the method of a class.
+INSTANCE VARIABLE:
+ declared outside a method/constructor/any block.
+CLASS /STATIC VARIABLE:
+ declared within class
+ keyword "STATIC" is specified with claas variable
+***
+ INSTANCE VARIABLE   /  CLS VARIABLES:
+ Class variables are declared with keyword static and Instance variables are declared without static keyword.
+ Class variables are common to all instances of a class.
+ These variables are shared between the objects of a class
+
+
+ class A
+ {
+ static int a=10; // CLASS VARAIBLE
+ int z; // INSTANCE VARIABLE
+ public static void main(String args[])
+ {
+ A a=new A();
+ a.show(2);
+ }
+ void show(int a)
+ {
+ int x; // LOCAL VARAIBLE
+ x=a+5;
+ System.out.println(x);
+ }
+ }
+
+ DATA TYPES:
+   -integer
+   -float
+   -character
+   -boolean
+
+  integer:
+    byte(1 byte)
+    short(2 byte)
+    int(4 byte)
+    long(8 byte)
+  float:
+    float(4 byte)
+    double(8 byte)
+  character:
+    char(1 byte)
+  boolean:
+   bool(maximum 1 byte i.e...takes less thn tht)
+    
