@@ -11,3 +11,14 @@ String firstname= obj.nextLine();
      int count=obj.nextInt();      //correct
      obj.nextLine();
      String firstname= obj.nextLine();
+ create and can be imported.user defined packages
+
+ steps:
+   Pick a name for your package.
+   Choose a directory
+   Create subdirectories within the root directory for your package name.
+   Add the root directory for your package to the ClassPath environment variable.
+   Save the files for any classes you want to be in a particular package in the directory for that package.
+   Add a package statement to the beginning of each source file that belongs in a package.
+
+   eg:in my intellij...javaCore->src->main->java->com.learn(directory)->model(package)->user(class)
