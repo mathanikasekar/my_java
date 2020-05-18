@@ -1,0 +1,24 @@
+class name shld begins with CAPITAL LETTER
+don't use:ArrayList<String> name_array = new ArrayList<String>(10);
+use:ArrayList<String> name_array = new ArrayList<>();
+dont use half names for variables eg:num,i,a...
+use iterate_variable,number,name_array
+use constructors
+you shld not get input as integer then string..........
+eg:
+int count=obj.nextInt();           //wrong
+String firstname= obj.nextLine();
+     int count=obj.nextInt();      //correct
+     obj.nextLine();
+     String firstname= obj.nextLine();
+ create and can be imported.user defined packages
+
+ steps:
+   Pick a name for your package.
+   Choose a directory
+   Create subdirectories within the root directory for your package name.
+   Add the root directory for your package to the ClassPath environment variable.
+   Save the files for any classes you want to be in a particular package in the directory for that package.
+   Add a package statement to the beginning of each source file that belongs in a package.
+
+   eg:in my intellij...javaCore->src->main->java->com.learn(directory)->model(package)->user(class)

@@ -1,0 +1,134 @@
+OPERATORS:
+Operators are symbols that tell the compiler to perform specific mathematical or logical manipulation
+Operators are the constructs which can manipulate the values of the operands.
+Consider the expression 2 + 3 = 5, here 2 and 3 are operands and + is called operator.
+
+Java supports the following types of operators:
+
+Arithmetic Operators
+Assignment Operators
+Logical Operators
+Relational Operators
+Unary Operators
+Bitwise Operators
+Ternary Operators
+Shift Operators
+
+ARITHMETIC:
++
+-
+*
+/
+
+ASSIGNMENT:
+=
++=
+-=
+*=
+/=
+%=
+^=
+
+LOGICAL:
+And - &&
+or - ||
+not - !
+class A
+{
+    public static void main(String[] args)
+     {
+        int a = 10,b=20;
+        System.out.println(a<10 && a<15);    //returns false // & also gives same thing like &&
+        System.out.println(a<10 || a<20);    //returns true
+        System.out.println(!(a<10 &  a<20)); //returns true
+    }
+}
+BITWISE:
+& - and - returns bit by bit AND of input
+| - or - returns OR of input values
+^ -XOR - returns XOR of input values
+(Complement) - 	returns the one’s complement.(all bits reversed)
+class A
+{
+      public static void main(String[] args)
+       {
+            int a = 58; // 111010
+            int b=13;  //    1101
+        System.out.println(a&b);  //8 = 1000
+        System.out.println(a|b);  //63=111111
+        System.out.println(a^b);  //55=11011
+        System.out.println(~a);  //-59
+          }
+}
+
+RELATIONAL:
+ ==
+ !=
+ >
+ <
+ >=
+ <=
+
+ UNARY:
+ ++ - increments the value by 1. There is post-increment and pre-increment operators
+ -- - decrements the value by 1. There is post decrement and pre decrement operators
+ ! - invert a boolean value
+   ********  PRE INCREMENT / POST INCREMENT:
+    Pre increment operator is used to increment variable value by 1 before assigning the value to the variable.
+    Post increment operator is used to increment variable value by 1 after assigning the value to the variable.
+class A
+{
+public static void main(String args[])
+{
+int a=10;
+System.out.println(++a);   // o/p:11 now value is 11
+System.out.println(a++);   // o/p:11 now value is 12 but aftr printing 1ly it increments
+System.out.println(--a);   // o/p:11 now vavlu is 11
+System.out.println(a--);   // o/p:11 now value is 10 but aftr printing only it decrements
+}
+}
+class A
+{
+    public static void main(String args[])
+    {
+        int a=10;
+        int b=20;
+        int c=30;
+        int d=40;
+        System.out.println(++a);  // o/p:11
+        System.out.println(b++);  // o/p:20
+        System.out.println(--c);  // o/p:29
+        System.out.println(d++);  // o/p:40
+    }
+}
+
+TERNARY:
+ decreases the length of code while performing comparisons and conditionals.
+ alternative for if-else and nested if-else
+ order of execution - left to right.
+
+ (Condition) ? (Statement1) : (Statement2);
+
+ Condition:
+  It is the expression to be evaluated which returns a boolean value.
+ Statement 1:
+  It is the statement to be executed if the condition results in a true state.
+ Statement 2:
+  It is the statement to be executed if the condition results in a false state.
+
+  class A
+   {
+      public static void main(String[] args)
+       {
+        int a=5;
+        (a==5) ? System.out.println("YES") : System.out.println("NO")
+        }
+}
+Output–yes
+
+SHIFT:
+  used to shift the bits of a number left or right, thereby multiplying or dividing the number.
+  There are three different types of shift operators,
+    <<-left shift operator
+    >>-signed right operator
+    >>>-unsigned right shift operator
