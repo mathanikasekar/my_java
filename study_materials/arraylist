@@ -89,4 +89,15 @@ o/p:
    before clear [5, Apple, 2.3]
    after clear []
 
- void trimToSize()
+ void trimToSize()-not used practically
+
+  int indexOf(object obj)
+           -returns index of element.
+           -if an element present more than once FIRST occurence index will be displayed(bcas duplication is available in arraylist)
+           -if element not present -1 is returned
+
+  int size()
+         -
+
+  object clone()
+        -clone the object i.e.exactly same arraylist can be stored in other object

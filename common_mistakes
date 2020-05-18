@@ -1,0 +1,13 @@
+class name shld begins with CAPITAL LETTER
+don't use:ArrayList<String> name_array = new ArrayList<String>(10);
+use:ArrayList<String> name_array = new ArrayList<>();
+dont use half names for variables eg:num,i,a...
+use iterate_variable,number,name_array
+use constructors
+you shld not get input as integer then string..........
+eg:
+int count=obj.nextInt();           //wrong
+String firstname= obj.nextLine();
+     int count=obj.nextInt();      //correct
+     obj.nextLine();
+     String firstname= obj.nextLine();
