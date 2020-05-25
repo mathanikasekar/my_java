@@ -1,0 +1,36 @@
+DONT TALK IN BETWEEN OTHERS TALKING
+Naming conventions:
+ Class name should begins with CAPITAL LETTER
+      Operators  //correct
+      operators  //wrong
+ dont use underscore
+      MyProgram   //correct
+      My_program  //wrong
+ dont leave space between two words
+      My Program   //correct
+      MyProgram   //wrong
+ dont use half names for variables
+      num,a,b,c...   //correct
+      i(can be used for loops),numberOfNames, names  //wrong
+
+ARRAYLIST :
+  don't use : ArrayList<String> name_array = new ArrayList<String>(10);
+   use:ArrayList<String> name_array = new ArrayList<>();
+  you shld not get input as integer after string..........
+  eg:
+   int count=obj.nextInt();           //wrong
+   String firstname= obj.nextLine();
+   int count=obj.nextInt();      //correct
+   obj.nextLine();
+   String firstname= obj.nextLine();
+PACKAGE:
+ create and can be imported.user defined packages
+ steps:
+   Pick a name for your package.
+   Choose a directory
+   Create subdirectories within the root directory for your package name.
+   Add the root directory for your package to the ClassPath environment variable.
+   Save the files for any classes you want to be in a particular package in the directory for that package.
+   Add a package statement to the beginning of each source file that belongs in a package.
+
+   eg:in my intellij...javaCore->src->main->java->com.learn(directory)->model(package)->user(class)

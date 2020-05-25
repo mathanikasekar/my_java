@@ -1,0 +1,17 @@
+LAMBDAEXPRESSION:
+ It provide the implementation of an interface which has functional interface
+ we don't need to define the method again for providing the implementation.
+ Java lambda expression is treated as a function, so compiler does not create .class file.
+
+FUNCTIONAL INTERFACE:
+ Lambda expression provides implementation of functional interface.
+ An interface which has only one abstract method is called functional interface.
+ Java provides an anotation @FunctionalInterface, which is used to declare an interface as functional
+
+USE:
+To provide the implementation of Functional interface.
+Less coding.
+
+SYNTAX:
+ (argument-list) -> {body}
+ 

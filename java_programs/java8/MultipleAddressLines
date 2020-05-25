@@ -1,0 +1,100 @@
+// text.txt
+
+Anu,3,no.10,ram nagar,Chennai,no.11,sakthi nagar,mumbai,no.12,kangayam,Keeranur.
+Rathi,2,no.20,Sakthi nagar,kangayam,no.21,paramathi,karur
+Mathu,1,no.30,thennilai,karur.
+Siva,5,no.41,avangalipalayam,Rasipalayam,no.42,Nallroad,Kangayam,no.43,padiyur,Tirupur,no.44,t. nagar,Chennai,no.45,banthra,mumbai.
+Niralya,1,no.51,palladam,vadugapalayam.
+
+// UserLines.java
+
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserLines
+{
+    private String name;
+    private List<AddressLines> addressline;
+
+
+}
+
+// AddressLines.java
+
+package com.learn.model;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AddressLines
+{
+    private String addressLine1;
+    private String addressLine2;
+    private String addressLine3;
+}
+
+// MultipleAddressLines.java
+
+package com.learn.java8;
+
+import com.learn.model.AddressLines;
+import com.learn.model.UserLines;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Stream;
+
+public class MultipleAddressLines {
+    public static void main(String[] args) throws IOException {
+
+        List<UserLines> usersList = new ArrayList<>();
+
+        String inputFileName = "C:\\Users\\mathu\\Desktop\\text.txt";
+        Stream<String> stream = Files.lines(Paths.get(inputFileName));
+        stream.forEach(line -> {
+            String[] words = line.split(",");
+            String name = words[0];
+            System.out.println(name);
+            UserLines user = new UserLines();
+            user.setName(name);
+            int numberOfAddress = Integer.parseInt(words[1]);
+            List<AddressLines> address = new ArrayList<>();
+            AddressLines addresses = null;
+            for (int i = 0; i < numberOfAddress; i++) {
+                addresses = new AddressLines();
+                AddressLines addresses1 = new AddressLines();
+                addresses.setAddressLine1(words[2 + i]);
+                addresses.setAddressLine2(words[3 + i]);
+                addresses.setAddressLine3(words[4 + i]);
+                address.add(addresses);
+            }
+            user.setAddressline(address);
+            usersList.add(user);
+        });
+        usersList.forEach(user -> {
+            System.out.println(user.getName() + " | " + user.getAddressline());
+
+        });
+
+
+    }
+}
+
+// output
+
+Anu
+Rathi
+Mathu
+Siva
+Niralya
+Anu | [AddressLines(addressLine1=no.10, addressLine2=ram nagar, addressLine3=Chennai), AddressLines(addressLine1=ram nagar, addressLine2=Chennai, addressLine3=no.11), AddressLines(addressLine1=Chennai, addressLine2=no.11, addressLine3=sakthi nagar)]
+Rathi | [AddressLines(addressLine1=no.20, addressLine2=Sakthi nagar, addressLine3=kangayam), AddressLines(addressLine1=Sakthi nagar, addressLine2=kangayam, addressLine3=no.21)]
+Mathu | [AddressLines(addressLine1=no.30, addressLine2=thennilai, addressLine3=karur)]
+Siva | [AddressLines(addressLine1=no.41, addressLine2=avangalipalayam, addressLine3=Rasipalayam), AddressLines(addressLine1=avangalipalayam, addressLine2=Rasipalayam, addressLine3=no.42), AddressLines(addressLine1=Rasipalayam, addressLine2=no.42, addressLine3=Nallroad), AddressLines(addressLine1=no.42, addressLine2=Nallroad, addressLine3=Kangayam), AddressLines(addressLine1=Nallroad, addressLine2=Kangayam, addressLine3=no.43)]
+Niralya | [AddressLines(addressLine1=no.51, addressLine2=palladam, addressLine3=vadugapalayam)]
