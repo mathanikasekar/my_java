@@ -1,0 +1,30 @@
+def:
+ a class within other class
+adv:
+ Nested classes represent a special type of relationship that is
+ -it can access all the members (data members and methods) of outer class including private.
+ Nested classes are used to develop more readable and maintainable code
+ because it logically group classes and interfaces in one place only.
+ -encapsulation
+eg:
+package com.learn.excercies;
+class OuterClass
+{
+    int a=5;
+    class InnerClass
+    {
+        int b=10;
+    }
+}
+
+public class NestedClass extends OuterClass
+{
+    public static void main(String args[])
+    {
+        OuterClass outerClass=new OuterClass();
+        OuterClass.InnerClass innerClass=outerClass.new InnerClass();//near innerclass name put outerClass name
+        // likewise near innerClass obj put outerclass obj
+        System.out.println(outerClass.a);
+        System.out.println(innerClass.b);
+    }
+}
