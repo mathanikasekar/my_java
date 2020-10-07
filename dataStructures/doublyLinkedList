@@ -1,0 +1,59 @@
+package collections;
+import java.util.*;
+public class DoublyLinkedList {
+
+    class Node {
+        int data;
+        Node prev;
+        Node next;
+
+        //construtor creation
+        public Node(int data) {
+            this.data = data;
+        }
+    }
+    Node head,tail=null;
+
+    void addNode(int data)
+    {
+        Node nn=new Node(data); //constructor for class Node
+        if(head==null)
+        {
+            head=tail=nn;
+            head.prev=null;
+            head.next=null;
+        }
+        else
+        {
+            tail.next=nn;
+            nn.prev=tail;
+            tail=nn;
+            tail.next=null;
+        }
+    }
+    void display()
+    {
+        Node current=head;
+        if(head==null)
+            System.out.println("empty list");
+        else
+        {
+            while(current!=null)
+            {
+                System.out.println(current.data);
+                current=current.next;
+            }
+        }
+    }
+
+
+    public static void main(String[] args)
+    {
+        DoublyLinkedList dl = new DoublyLinkedList();
+        dl.addNode(5);
+        dl.addNode(10);
+        dl.addNode(15);
+        dl.display();
+    }
+
+}

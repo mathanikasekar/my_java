@@ -1,7 +1,5 @@
 
-
 LL
-
 arraylist dis adv insertion, deletion time consuming so we go for linkedList
 LL adv
  easy insertion/deletion
@@ -70,3 +68,10 @@ retrieve/delete-object
  -it is similar to creating normal array
    int a[]=new int[10];
  -size()
+
+APP:
+stack-evaluationg expressions,paranthesis evaluation,recursion
+queue-
+singly LL
+ -implement stack,queue
+ -

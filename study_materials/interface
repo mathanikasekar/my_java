@@ -1,0 +1,74 @@
+
+/*
+RBI(Reserve bank of india) is the master of all banks and
+it has some standard rules to be followed by all banks
+ */
+
+/*initially only 2 functions but in upcoming years requirements may change and
+some class may accept hat some may not
+So we declare that additional methods as public default so that needed class may override that
+and remaining may not*/
+
+/*
+SBI accept linking aadhar but indianbank dont need that so
+it didnt override linkAadhar method
+ */
+package learnings;
+interface RBI
+{
+    void deposit();
+    void withdraw();
+    public default void linkAadhar()
+    {
+        System.out.println("link aadhar if needed");
+    }
+}
+class SBI implements RBI
+{
+
+    @Override
+    public void deposit()
+    {
+        System.out.println("SBI deposit");
+    }
+
+    @Override
+    public void withdraw()
+    {
+        System.out.println("SBI withdraw");
+    }
+
+    @Override
+    public void linkAadhar()
+    {
+        System.out.println("linked aadhar with SBI");
+    }
+}
+class IndianBank implements RBI
+{
+
+    @Override
+    public void deposit()
+    {
+        System.out.println("IndianBank deposit");
+    }
+
+    @Override
+    public void withdraw()
+    {
+        System.out.println("IndianBank withdraw");
+    }
+}
+public class Interface
+{
+    public static void main(String[] args)
+    {
+        RBI sbi=new SBI();
+        sbi.deposit();
+        sbi.withdraw();
+        sbi.linkAadhar();
+        RBI indianBank=new IndianBank();
+        indianBank.deposit();
+        indianBank.withdraw();
+    }
+}
