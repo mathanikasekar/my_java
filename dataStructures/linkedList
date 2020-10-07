@@ -1,0 +1,72 @@
+
+
+LL
+
+arraylist dis adv insertion, deletion time consuming so we go for linkedList
+LL adv
+ easy insertion/deletion
+dis adv
+ random access is not possible
+
+DEFINITON:
+ -linear data structure
+ -chain/collection of nodes
+ -each node contains a value and a address to the next node in the chain
+ -head points to 1st node and last node points to null
+ -elements are not stored at contiguous memory locations
+
+TYPES:
+ -singly LL
+ -doubly legal LL
+ -circularly LL
+
+OPERATIONS:
+while adding -element
+retrieve/delete-object
+ -add(element)
+ -add(int index,element)
+ -addFirst(element)
+ -addLast(element)
+ -addAll(Collection c)
+ -addAll(int index, Collection c)
+ -clear()******************
+ -clone()
+ -contains(object o)
+ -descendingIterator()
+ -listIterator(int index)
+ -element()->retrieve the first element of a list.
+ -get(int index)
+ -getFirst()
+ -getLast()
+ -indexOf(object o)
+ -lastIndexOf(object o)
+ -peek()
+  -return first ele of the list
+ -peekFirst()
+ -peekLast()
+
+ difference b/w get and peek....if elt not present get throws exception but peek returns "null"
+
+ -offer(element)
+ -offerFirst(element)
+ -offerLast(element)
+
+ difference b/w add and offer....if unable to add add() throws exception but offer() returns "false"
+
+ -poll()
+  -retrieve and remove FIRST elt
+ -pollFirst()
+ -pollLast()
+ -remove(element)
+ -remove(int index)
+ -removeFirst()
+ -removeLast()
+ -removeFirstOccurence(object o)
+ -removeLastOccurence(object o)
+ -set(int index,element)
+ -toArray()
+  -simply create array
+ -toArray(new datatype [linkedList name.size()])
+ -it is similar to creating normal array
+   int a[]=new int[10];
+ -size()

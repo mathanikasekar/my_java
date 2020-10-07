@@ -1,0 +1,146 @@
+
+AL:
+
+Agenda:
+ diff b/w array and ArrayList
+ arraylist properties
+ constructor
+ operation
+ advantage
+ disadvantage
+
+  array                                         ArrayList
+  fixed size                                dynamic size
+  duplicate allowed                         duplicate allowed
+  single data type                          mixed data type
+  can't store null value                    can store null value
+ -->array(fixed size)-->arraylist(insertion,deletion time consuming)-->linkedlist(easy insertion,deletion)
+arraylist:
+ Growable array/Dynamic array / Resizable array.
+ while insertion order will be preserved.
+****When we create an arraylist by using a default constructor the internal array been created is 10  in size
+which is called the default capacity.
+ In the entire collection framework, only two classes implements RandomAcess interface (which is a marker interface).
+They are ArrayList and Vector.
+ ArrayList and Vectors are used most for retrieval operation as they implements the RandomAcess interface
+which ensures the same fetching time irrespective of the index.
+initial size:10
+when 11th (object)item is added, it becomes--> current size*3
+                                              ----------------+1
+                                                      2
+  current size is 10 by frmla when next a elt added, size becomes 16(10/2 * 3 +1) (5*3+1)
+
+-ArrayList can't be created for primitive data types, so members of ArrayList are always references to objects
+at different memory locations. Therefore in ArrayList, the actual objects are never stored at contiguous locations.
+-References of the actual objects are stored at contiguous locations.
+//in arraylist elements are called as objects
+
+CONSTRUCTORS:
+ArrayList()
+  ArrayList myList=new ArrayList();
+ArrayList(Collection collectionObject)
+  ArrayList myList=new ArrayList(c);
+ArrayList(int size)
+  ArrayList myList=new ArrayList(10);
+
+OPERATIONS:
+ add()
+ add(int index,datatype element)
+ remove(int index)
+ remove(object)
+ removeIf(condition)
+ removeRange(int startingIndex,int endingIndex)
+ set(int index, element)
+ get(int index)
+ addAll(Collection C)
+      append all the elements from a specific collection to the end of the mentioned list
+ addAll(int index, Collection C)
+ clear()
+ clone()
+ contains(object o)
+ indexOf(object o)
+ lastIndexOf(object o)
+ size()
+ subList(int startingIndex,int endingIndex)
+      include startingIndex but exclude endingIndex
+ trimToSize()
+ toArray()
+
+
+  insertion at middle shift the elements right side
+  0  1  2   3  4
+  10 20 30 40 50
+
+  add(2,11)
+
+  0  1  2   3  4
+  10 20 30 40 50
+        11
+
+  0  1  2   3  4
+  10 20 11  40 50
+        30
+
+  0  1  2   3  4
+  10 20 11  30 50
+            40
+
+  0  1  2   3  4
+  10 20 11  30 40
+               50
+
+  0  1  2  3  4  5
+  10 20 11 30 40 50
+
+  insertion is time consuming operation because consider an array with 1000 elements
+  if we want to add at 5th position remaining 994  should be shifted right.
+     same for remove(int index) operation
+  deletion also time consuming
+
+  adv:
+   retrieval listname.get(int index)
+   because arraylist class implements an interface called "random access"
+   it is a marker interface(w/o any method)
+   speciality of ramdom access interface is same time for retrieval of all elements irrespective of its position
+   interface "random access" can be implemented only by 2 cls in collection: 1.ArrayList 2.vector
+  dis adv:
+   insertion listname.add(int index,int element)
+   deletion listname.remove(int index)
+
+   package collections;
+   /*
+   import java.util.ArrayList;
+   import java.util.Collection;
+   import java.util.Iterator;
+   */
+   import java.util.*;
+   public class ArrayLists
+   {
+       public static void main(String[] args)
+       {
+
+           ArrayList myList=new ArrayList();
+           //Iterator iterator=myList.iterator();
+           myList.add(5);
+           myList.add(5);
+           myList.add(1.02);
+           myList.add(null);
+           myList.add("deva");
+           myList.add(false);
+           myList.add(100);
+           myList.remove(1);
+           System.out.println("get method:"+myList.get(4));
+           Iterator iterator=myList.iterator();
+           //access elements using while loop and hasNext method
+           while(iterator.hasNext())
+           {
+               System.out.println(iterator.next());
+           }
+           //access elements using for loop
+           int i;
+           for(i=0;i<myList.size();i++)
+           {
+               System.out.println(myList.get(i));
+           }
+       }
+   }
