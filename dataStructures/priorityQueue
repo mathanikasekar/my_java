@@ -1,0 +1,7 @@
+PriorityQueue:
+ when elements are processed based on the priority.
+ i/p:
+ [array of characters]- w,y,a,d,q-->a,d,q,w,y
+ priority based on ASCII values.
+Application:
+ Dijkstra's Algorithm

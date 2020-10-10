@@ -1,0 +1,40 @@
+Vector:
+ dynamic array
+ diff datatype
+ null value is possible
+
+ It is recommended to use the Vector class in the thread-safe implementation only
+ synchronized
+
+Constructors:
+vector()
+ Vector v= new Vector();
+  -create a vector of size 10
+vector(int initialCapacity)
+ Vector v= new Vector(100);
+vector(Collection<? extends E> c)
+ Vector v= new Vector(c);
+
+methods:
+add(element)
+add(int index,element)
+insertElementAt(E obj, int index)
+addAll(Collection c)
+addAll(int index,Collection c)
+addElement(element)
+capacity()
+size()
+gets
+indexOf(Object o)
+firstElement()
+lastElement()
+iterator()
+listIterator()
+listIterator(int index)
+forEach(Consumer<?super E> action)
+indexOf(Object o, int index)
+ search from specified index
+ i/p: 10 20 30 40 50 20 40 10 20 80
+      0  1  2  3  4  5  6  7  8  9
+ indexOf(20,4)
+ o/p:5

@@ -28,35 +28,3 @@ types:
  singly
  doubly
  circularly-singly-doubly
-
-
-iterable->collections
-collections**********************duplicate data can be stored,insertion order preserved
--list
--queue
--set
-upto this everything is interface
-
-list
--arraylist
--linkedlist
--vector----stack
-
-queue
--priority queue
--deque(I)
--arraydeque
-
-set
--hashset
--linkedhashset
--sortedset(I)----treeset
-
- array(fixed size)-->arraylist(insertion,deletion time consuming)-->linkedlist(easy insertion,deletion)
-Linkedlist:
- 3 parts head,node/body,tail
- non contiguous mem allocations whereas array store elts in contiguous mem locations.
-types:
- singly
- doubly
- circularly-singly-doubly

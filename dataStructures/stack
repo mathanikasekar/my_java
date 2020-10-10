@@ -1,0 +1,10 @@
+stak:
+ LIFO
+construtors:
+ stack()
+methods:
+ push(E item)
+ pop()
+ peek()
+ empty()
+ search(Object o)

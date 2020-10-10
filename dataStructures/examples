@@ -1,0 +1,36 @@
+real time examples:
+
+ array:
+  string processing
+  save contacts in phone
+  image processing
+
+linkedlist:
+ image viewer
+ circularly-music playlist
+
+stack:
+ UNDO operation
+ evaluationg expressions,
+ paranthesis evaluation,
+ recursion
+
+queue:
+ operating system-job scheduling
+ sending n number of mails. they store in queue and then send one by one
+ ticket booking
+
+graph:
+ GPS's tracking
+
+tree:
+ domain name server(DNS)
+
+hash table:
+ to store data in database
+ browsers
+ to store filename and filepath
+
+heap:
+ priority queue
+ 
