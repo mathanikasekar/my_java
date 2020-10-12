@@ -5,3 +5,11 @@ PriorityQueue:
  priority based on ASCII values.
 Application:
  Dijkstra's Algorithm
+ USE: always give smallest element when we poll.
+ i/p:
+ 4 1 8 3 5 6
+ store as 1.....(first elt is alwys smallest..remaining elements in any order)
+poll()-1(o/p) [3,4,8,5,6] (remaining)
+poll()-3      [4,8,5,6] (remaining)
+poll()-4      [5,8,6] (remaining)
+poll()-5      [6,8] (remaining)

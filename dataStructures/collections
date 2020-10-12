@@ -12,13 +12,13 @@ list
 
 queue
 -priority queue
--deque(I)
+-deque(I) double ended queue
 -arraydeque
 
 set
 -hashset
 -linkedhashset
--sortedset(I)----treeset
+-sortedset(I)----treeset(ordered)
 
  array(fixed size)-->arraylist(insertion,deletion time consuming)-->linkedlist(easy insertion,deletion)
 Linkedlist:
