@@ -1,0 +1,39 @@
+stream:
+ -to take elements in an order (like for loop)
+
+source:
+ -collections,list,set,array,int,long,double,lines of file
+operations:
+ -intermediate:
+  -filter
+  -map
+  -sort
+   -->anyMatch()  distinct()
+   -->filter()    findFirst()
+   -->map()       flatmap()
+   -->sorted()    skip()
+
+ -terminal
+  -for each
+  -collect/reduce
+   -->count()  reduce()  summaryStatistics
+   -->max()    min()
+
+   package java8;
+   import org.w3c.dom.ls.LSOutput;
+   import java.lang.reflect.Array;
+   import java.util.*;
+   import java.io.*;
+   import java.lang.*;
+   import java.util.stream.*;
+   public class StreamExample
+   {
+       public static void main(String[] args)
+       {
+           Scanner scanner=new Scanner(System.in);
+           String s1[]={"deva","lakshmi","anu","butta","papu","priya","mathu","mathanika"};
+           List <String>l1= Arrays.asList(s1);
+          l1.stream().filter(x->x.startsWith
+                  ("m")).forEach(x-> System.out.println(x));
+       }
+   }

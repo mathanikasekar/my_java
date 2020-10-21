@@ -1,0 +1,23 @@
+package string;
+import java.io.*;
+import java.util.*;
+public class RemoveDuplicateAndReverse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s1 = "aabbbcccd";
+
+        /*
+        this operation does not change the original data
+                s1
+                .chars() //to get char stream
+                .distinct() //to eliminate similar characters
+                .forEach(c -> System.out.println((char)c)); //to print them
+        StringBuilder sbExample = new StringBuilder(s1);
+        System.out.println(sbExample.reverse());
+        */
+        //to reverse them we need to store them in string builder
+        StringBuilder sb = new StringBuilder();
+        s1.chars().distinct().forEach(c -> sb.append((char) c));
+        System.out.println(sb.reverse());
+    }
+}

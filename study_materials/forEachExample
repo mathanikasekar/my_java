@@ -1,0 +1,15 @@
+package learnings;
+
+import java.util.*;
+
+public class ForEachExample {
+    public static void main(String[] args)
+    {
+        Scanner scanner=new Scanner(System.in);
+        String s[]={" deva"," mathanika"," sekar"};
+        for(String ss:s)
+        {
+            System.out.println(ss);
+        }
+    }
+}

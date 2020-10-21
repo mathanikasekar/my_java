@@ -1,0 +1,7 @@
+map:
+ unique elements
+ Map(I)
+ SortedMap(I)
+ HashMap(c)
+ LinkedHashMap(c)
+ TreeMap(c)
