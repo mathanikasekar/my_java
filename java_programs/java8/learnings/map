@@ -1,0 +1,56 @@
+map:
+ unique elements
+ Map(I)
+ SortedMap(I)
+ HashMap(c)
+ LinkedHashMap(c)
+ TreeMap(c)
+MAP:
+ key value pair
+ ex:userID password
+ /*
+  Map(I)
+  SortedMap(I)
+  HashMap(c)
+  LinkedHashMap(c)
+  TreeMap(c)
+  */
+ package java8;
+ import java.util.*;
+ import java.io.*;
+ import java.lang.*;
+ public class MapExample
+ {
+     public static void main(String[] args)
+     {
+         Scanner scanner = new Scanner(System.in);
+         Map <Integer,String> map=new HashMap<Integer,String>();
+         map.put(1,"apple");
+         map.put(2,"ball");
+         map.put(3,"cat");
+         map.put(4,"doll");
+ //        System.out.println(map);
+ //        //contains key
+ //        System.out.println(map.containsKey(2));
+ //        //contains value
+ //        System.out.println(map.containsValue("doll"));
+ //        //get value for given key
+ //        System.out.println(map.get(2));
+ //        //to access entire map elements
+       System.out.println("entire set : "+map.entrySet());
+       System.out.println("only key set : " +map.keySet());
+       System.out.println("only value set : " +map.values());
+ //        //if key and value are same
+ //        System.out.println(map.equals(2));
+ //        /*only for same data type of key value pair
+ //        <int,int>--->(4,4)
+ //        not for <int, string>--->(4,"4")
+ //        */
+ //        System.out.println(map.hashCode());
+ //        System.out.println(map.keySet());
+ //        // to change value for existing key
+ //        System.out.println(map.put(2,"buffalo"));
+ //        //
+
+         }
+     }

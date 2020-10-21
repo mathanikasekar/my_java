@@ -19,6 +19,12 @@ operations:
    -->count()  reduce()  summaryStatistics
    -->max()    min()
 
+   /*
+   filter(variable->variable.inbuilt_function())
+     -filter should be used with stream using dot operator
+     -to print that we can not do directly we should use foreach loop using dot operator
+    */
+
    package java8;
    import org.w3c.dom.ls.LSOutput;
    import java.lang.reflect.Array;
