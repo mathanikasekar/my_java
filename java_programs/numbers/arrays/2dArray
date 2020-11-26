@@ -1,0 +1,23 @@
+package numbers.array;
+import java.util.Scanner;
+public class TwoDarray
+{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        int myArray [] []=new int[2][2];
+        int i,j;
+        for(i=0;i<2;i++)
+        {
+            for(j=0;j<2;j++)
+            {
+                myArray[i][j]=scanner.nextInt();
+            }
+        }
+
+        for(int k[]:myArray)        //like row
+        {
+            for(int l:k)            //like column
+            System.out.println(l);  //only l not myArray[l]********************
+        }
+    }
+}

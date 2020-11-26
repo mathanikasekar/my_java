@@ -14,4 +14,8 @@ Less coding.
 
 SYNTAX:
  (argument-list) -> {body}
- 
+
+lambda:
+ Functional Interface(only one abstract method may have 'n' number of other methods
+   but abstract should be ONLY ONE)
+ Functional Interface(runnable,actionlistener,comparable)
