@@ -1,0 +1,60 @@
+package collections;
+
+public class CirularlyLinkedListDoubly
+{
+class Node
+{
+    int data;
+    Node prev;
+    Node next;
+    public Node(int data)
+    {
+        this.data=data;
+    }
+}
+Node head,tail=null;
+public void addNode(int data)
+{
+    Node nn=new Node(data);
+    if(head==null)
+    {
+        head=tail=nn;
+        head.prev=null;
+        head.next=head;
+    }
+    else
+    {
+        tail.next=nn;
+        nn.prev=tail;
+        tail=nn;
+        tail.next=head;
+    }
+}
+public void display()
+{
+    if(head==null)
+    {
+        System.out.println("empty list");
+    }
+    else
+    {
+        Node current=head;
+        do
+        {
+            System.out.println(current.data);
+            current=current.next;
+        }while(current!=head);
+
+    }
+
+
+}
+
+    public static void main(String[] args) {
+        CirularlyLinkedListDoubly cld=new CirularlyLinkedListDoubly();
+        cld.addNode(1);
+        cld.addNode(2);
+        cld.addNode(3);
+        cld.display();
+    }
+}

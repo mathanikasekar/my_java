@@ -1,0 +1,56 @@
+package collections;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public abstract class StackClass implements Collection
+{
+    public static void main(String[] args) {
+        ListIterator li;
+        Stack<Integer> stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
+//        System.out.println(stack);
+//        stack.pop();
+//        System.out.println(stack);
+//        System.out.println(stack.peek());
+//        System.out.println(stack.isEmpty());
+//        System.out.println(stack.lastElement());
+//        System.out.println(stack.lastIndexOf(4));
+//        System.out.println(stack.lastIndexOf(4,5));
+//        System.out.println(stack.empty());
+//        System.out.println(stack.search(3));
+//        li = stack.listIterator();
+//        while (li.hasNext()) {
+//            System.out.println(li.next());
+//        }
+//        while (li.hasPrevious()) {
+//            System.out.println(li.previous());
+//        }
+//        stack.stream()
+//                .peek(item -> System.out.println("Peek before Filter - " + item))
+//                .filter(item -> item > 3)
+//                .peek(item -> System.out.println("Peek after Filter - " + item))
+//                .map(item -> item + 10)
+//                .forEach(item -> {
+//                    System.out.println("ForEach - " +item);
+//                });
+
+        List<Integer> output = stack.stream()
+//                .peek(item -> System.out.println("Peek before Filter - " + item))
+                .filter(item -> item > 3)
+//                .peek(item -> System.out.println("Peek after Filter - " + item))
+                .map(item -> item + 10)
+                .collect(Collectors.toList());
+
+        System.out.println(output);
+
+
+    }
+
+
+}

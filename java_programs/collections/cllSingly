@@ -1,0 +1,56 @@
+package collections;
+
+public class CirularlyLinkedListSingly
+{
+    class Node
+    {
+        int data;
+        Node next;
+
+        public Node(int data)
+        {
+            this.data = data;
+        }
+    }
+    Node head,tail=null;
+
+    void addNode(int data)
+    {
+        Node nn=new Node(data);
+        if(head==null)
+        {
+            head=tail=nn;
+            head.next=head;
+        }
+        else
+        {
+            tail.next=nn;
+            tail=nn;
+            nn.next=head;
+        }
+    }
+    void display()
+    {
+        if(head==null)
+        {
+            System.out.println("Empty list");
+        }
+        else
+        {
+            Node current=head;
+            do
+            {
+                System.out.println(current.data);
+                current=current.next;
+            }while (current!=head);
+        }
+    }
+    public static void main(String[] args)
+    {
+        CirularlyLinkedListSingly cls=new CirularlyLinkedListSingly();
+        cls.addNode(55);
+        cls.addNode(555);
+        cls.addNode(5555);
+        cls.display();
+    }
+}

@@ -1,0 +1,37 @@
+//occurence greater than n/3
+
+package numbers.array;
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class OccurenceGreaterThan {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter no of elements");
+        int n = scanner.nextInt();
+        int array[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter elements in the array");
+            array[i] = scanner.nextInt();
+        }
+        int c , i, j;
+        for (i = 0; i < n-1; i++)
+        {
+            c=1;
+            /*if c=0,[1,1] gives c=1 but actual count is 2
+            because we use i loop and j loop
+             that's why we initialize with 3
+             */
+            for (j = i + 1; j < n; j++)
+            {
+                if (array[i] == array[j])
+                {
+                    c++;
+                }
+            }
+                if(c==n/3)
+                    System.out.println(array[i]);
+        }
+    }
+}

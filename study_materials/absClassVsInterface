@@ -1,0 +1,53 @@
+
+/*
+
+              interface                                 abstract class
+1. no constructor                                  have constructor
+2. variables-public static final (default)         any specifier
+3. variables must be initialized                   no need to initialize
+4. no function definition                          have both declaration and definition
+5. multiple inheritance possible                   not possible
+6. only abstract method                            both abstract and concrete method
+7. indeirect obj creation is possible              obj creation not possible as abstract class
+                                                     contains incomplete methods(method definition)
+
+package collections;
+        import java.io.*;
+        import java.util.*;
+        import java.lang.*;
+interface Employee                        //interface
+{
+    public static final int a=10;
+    public abstract int getID();
+    public abstract float getSalary();
+}
+abstract class Student                   //abstract class
+{
+
+    int userIdGeneration(String name, int regNo)
+    {
+        name.toCharArray();
+        return regNo+name.charAt(0)+name.charAt(1);
+    }
+    abstract boolean pass(int marks);
+}
+public class AbstractClassVsInterface extends Student
+{
+    boolean pass(int marks)
+    {
+        if(marks>40)
+            return true;
+        else
+            return false;
+    }
+    public static void main(String[] args)
+    {
+        AbstractClassVsInterface abstractClassVsInterface=new AbstractClassVsInterface();
+        System.out.println(abstractClassVsInterface.userIDGeneration("deva",9225));
+        System.out.println(abstractClassVsInterface.pass(60));
+    }
+
+
+}
+
+ */

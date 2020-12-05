@@ -1,0 +1,47 @@
+
+//namngo argpes
+package string;
+public class ProcessWords
+{
+    public String process(String input1,int input2)
+    {
+        String [] a=input1.split(" ");
+        String b=a[(input2/10)-1];
+        String c=a[(input2%10)-1];
+        String d[]=new String[2];
+        d[0]=b;
+        d[1]=c;
+        String fin[]=new String[2];
+        for(int i=0;i<d.length;i++)
+        {
+            String s1=d[i];
+            int l=s1.length();
+            if(s1.length()%2==1)
+            {
+                String s2=s1.substring(0,l/2+1);
+                String str=s1.substring(l/2,s1.length());
+                StringBuilder sb=new StringBuilder(s2);
+                String str1=sb.reverse().toString();
+                fin[i]=str1+str;
+            }
+            else
+            {
+                String s2=s1.substring(0,l/2);
+                String str=s1.substring(l/2,s1.length());
+                StringBuilder sb=new StringBuilder(s2);
+                String str1=sb.reverse().toString();
+                fin[i]=str1+str;
+            }
+        }
+        return fin[0]+" "+fin[1];
+    }
+
+    public static void main(String[] args)
+    {
+        ProcessWords processWords=new ProcessWords();
+        String s1="Fruits like mango and apple are common but grapes is rare";
+        int n1=39;
+        System.out.println(processWords.process(s1,n1));
+
+    }
+}

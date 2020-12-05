@@ -1,0 +1,87 @@
+/*
+Given 2 strings str and word, you have to find how many words you can make from that given string.
+
+Input : str=”This is a test string” word=”tsit”
+Output : 2
+Explanation :
+ There are 4 t’s 4 s’s 3 i’s in the given str, by which you can only make 2 “tsit”.
+
+Input: str=”Here is HashedIn Technologies” word=”neurons”
+Output : 0
+Explanation: Since you do not have ‘u’ in str so can’t form the word “neurons”.
+ */
+
+package string;
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class NumberOfSubstring
+{
+  public static void main(String[] args)
+  {
+      Scanner scanner = new Scanner(System.in);
+      String s1 = scanner.nextLine();
+      String word1= scanner.nextLine();
+      System.out.println(getNum(s1, word1));
+  }
+    private static int getNum(String s, String word) {
+        s = s.toLowerCase();
+        int[] sCnt = new int[26];
+        int[] wCnt = new int[26];
+        int res = Integer.MAX_VALUE;
+        for(char c : s.toCharArray()) {
+            if(Character.isLetter(c))
+                sCnt[c - 'a']++;
+        }
+        for(char c : word.toCharArray()) {
+            if(Character.isLetter(c))
+                wCnt[c - 'a']++;
+        }
+        for(int i=0;i<26;i++) {
+            if(sCnt[i] != 0 && wCnt[i] != 0)
+                res = Math.min(res, sCnt[i]/wCnt[i]);
+            if(sCnt[i] == 0 && wCnt[i] != 0)
+                return 0;
+        }
+        return res;
+    }
+}
+
+/*  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s1=scanner.nextLine();
+        String s2=scanner.nextLine();
+        char charArrayS1[]=s1.toCharArray();
+        char charArrayS2[]=s2.toCharArray();
+        int c=0,i,countArrayS1[]=new int[26],countArrayS2[]=new int[26];
+        for(i=0;i<s1.length();i++)
+        {
+            if(charArrayS1[i]>='a' && charArrayS1[i]<='z')
+            countArrayS1[(int)charArrayS1[i]-97]=countArrayS1[i]+1;
+        }
+        for(i=0;i<s2.length();i++)
+        {
+            countArrayS2[(int)charArrayS2[i]-97]=countArrayS2[i]+1;
+        }
+//        for(i=0;i<26;i++)
+//        {
+//            if(countArray[i]>0)
+//            {
+//                System.out.println(countArray[i]);
+//            }
+//        }
+        int res=Integer.MAX_VALUE;;
+        for(i=0;i<26;i++)
+        {
+            if(countArrayS1[i]>0 && countArrayS2[i]>0)
+            {
+            // if(countArrayS1[i]>=countArrayS2[i])
+                res = Math.min(res, countArrayS1[i]/countArrayS2[i]);
+                if(countArrayS1[i] == 0 && countArrayS2[i] != 0)
+                    break;
+            }
+        }
+        System.out.println(res);
+    }
+   */

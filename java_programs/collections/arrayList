@@ -1,0 +1,37 @@
+package collections;
+/*
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+*/
+import java.util.*;
+public class ArrayLists
+{
+    public static void main(String[] args)
+    {
+
+        ArrayList myList=new ArrayList();
+        //Iterator iterator=myList.iterator();
+        myList.add(5);
+        myList.add(5);
+        myList.add(1.02);
+        myList.add(null);
+        myList.add("deva");
+        myList.add(false);
+        myList.add(100);
+        myList.remove(1);
+        System.out.println("get method:"+myList.get(4));
+        Iterator iterator=myList.iterator();
+        //access elements using while loop and hasNext method
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
+        //access elements using for loop
+        int i;
+        for(i=0;i<myList.size();i++)
+        {
+            System.out.println(myList.get(i));
+        }
+    }
+}

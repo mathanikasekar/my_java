@@ -1,0 +1,19 @@
+package collections;
+import java.util.*;
+public class vector {
+    public static void main(String[] args)
+    {
+        // create default vector
+        Vector v1 = new Vector();
+        // create a vector of given Size
+        Vector v2 = new Vector(20);
+        // create a vector of given Size and Increment
+        Vector v3 = new Vector(30, 10);
+        v1.add(1);
+        v1.add(2);
+        v1.add(3);
+        System.out.println(v1);
+        for(int i=0;i<v1.size();i++)
+            System.out.println(v1.get(i));
+    }
+}

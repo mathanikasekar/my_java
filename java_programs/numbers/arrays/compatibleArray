@@ -1,0 +1,49 @@
+/*
+two arrays are compatible if they are in same size and ith element of 1st array
+should be greater than 2nd array.
+if arraysize is <=0 display the message "invalid array size"
+ */
+package numbers.array;
+import java.io.*;
+import java.util.*;
+public class CompatibleArray {
+    public static void main(String[] args) {
+        int i;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter size of 1st array");
+        int n1 = scanner.nextInt();
+        System.out.println("enter size of 2nd array");
+        int n2 = scanner.nextInt();
+        if (n1 <= 0 || n2 <= 0)
+            System.out.println("invalid array size");
+        else {
+            System.out.println("enter elements of 1st array");
+            int a1[] = new int[n1];
+            for (i = 0; i < n1; i++) {
+                a1[i] = scanner.nextInt();
+            }
+            System.out.println("enter elements of 2nd array");
+            int a2[] = new int[n2];
+            for (i = 0; i < n2; i++) {
+                a2[i] = scanner.nextInt();
+            }
+            int flag = 0;
+            if (n1 == n2) {
+                for (i = 0; i < n1; i++) {
+                    if (a1[i] >= a2[i]) {
+                        flag = 0;
+                    } else {
+                        flag = 1;
+                        break;
+                    }
+                }
+            } else {
+                flag = 1;
+            }
+            if (flag == 0)
+                System.out.println("Compatible arrays");
+            else
+                System.out.println("Incompatible arrays");
+        }
+    }
+}

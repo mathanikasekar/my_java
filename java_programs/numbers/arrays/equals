@@ -1,0 +1,16 @@
+package numbers.array;
+
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Arrays;
+
+public class Equals {
+    public static void main(String[] args) {
+//        int a[]={1,2,3,4,5};        //during dec and intialize in single line no need to give size
+//        int b[]={1,2,3,4,5,6};
+//        System.out.println(Arrays.binarySearch(a,3));
+       // String s=new String(new char[]{'h','e','l','l','o'});
+        System.out.println("hi");
+
+    }
+}
