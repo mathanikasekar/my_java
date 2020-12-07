@@ -1,0 +1,55 @@
+
+/*
+Search for Nth Occurrence
+Given an array, number to search (say e1), and occurrence (say n), print the index of the nth occurrence of e1 in the array.
+If e1 does not occur n times, then print the index as -1.
+Input and Output:
+
+Get the size of an array and get elements one by one.
+Input the number to be searched and occurrence.
+For example, 7 => Size of an array 1 4 6 7 6 3 6 => array elements 6 => number to be searched 3 => 3rd occurrence of number 6
+Output: 6 Explanation: Number 6, 3rd occurrence position is 6
+
+Sample Input and Output:
+Input:
+7
+1 4 6 7 6 3 6
+6
+3
+Output:
+6
+ */
+package numbers.array;
+import java.util.Scanner;
+public class NthOccurence
+{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("enter size of array");
+                int size=scanner.nextInt();
+                int myArray[]=new int[size];
+                int i;
+                for(i=0;i<size;i++)
+                {
+                    System.out.println("enter elements");
+                    myArray[i]=scanner.nextInt();
+                }
+        System.out.println("enter element to be searched");
+        int element=scanner.nextInt();
+        System.out.println("enter occurence");
+        int occurence=scanner.nextInt();
+        int count=0,position=-1;
+        for(i=0;i<size;i++)
+        {
+            if(myArray[i]==element)
+            {
+                count++;
+            }
+            if(count==occurence)
+            {
+                break;
+            }
+        }
+        System.out.println(i);
+    }
+}
