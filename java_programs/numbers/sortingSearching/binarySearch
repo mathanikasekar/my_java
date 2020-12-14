@@ -1,0 +1,51 @@
+package numbers.searchingSorting;
+
+import java.util.Scanner;
+
+public class BinarySearch
+{
+    public static void main(String[] args)
+    {
+        BinarySearch binarySearch=new BinarySearch();
+        Scanner scanner = new Scanner(System.in);
+        int a[] = {1,2,3,4,5,6,7,8,9,10};
+        System.out.println("enter element to be searched");
+        int key=scanner.nextInt();
+        System.out.println(binarySearch.search(a,0,9,key));
+    }
+    int search(int a[],int start,int end,int key)
+    {
+       int l=start,h=end;
+       while(l<=h)
+       {
+          int mid=l+((h-l)/2);
+           if (a[mid] == key)
+               return mid;
+           else if (key < a[mid])
+               h=mid - 1;
+           else
+               l=mid + 1;
+           System.out.println(mid+ "  "+l+"   "+h+"   ");
+       }
+       return -1;
+    }
+}
+/*
+i/p   :1 2 3 4 5 6 7 8 9 10
+index :0 1 2 3 4 5 6 7 8 9
+key   :7
+search(array,0,9,7)
+ 0<9
+ mid=0+(9-0)/2  =4
+ 4
+ a[4] is 5 --->5!=7
+ key > a[mid]
+ so else part is considered
+
+ likewise goes on..
+ mid    l     h
+ 4      5     9
+ 7      5     6
+ 5      6     6
+final ans=6
+ */

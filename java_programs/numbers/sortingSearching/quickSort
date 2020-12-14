@@ -1,0 +1,49 @@
+package numbers.searchingSorting;
+import java.util.Scanner;
+public class QuickSort {
+    public static void main(String[] args) {
+        QuickSort quickSort = new QuickSort();
+        Scanner scanner = new Scanner(System.in);
+        int array[] = {2, 4, 6, 8, 10, 1, 3, 9, 7, 5};
+        int n = array.length;
+        quickSort.sort(array, 0, n - 1);
+        int i;
+        for (i = 0; i < n; i++) {
+            System.out.println(array[i]);
+        }
+    }
+    void sort(int array[], int start, int end) {
+        int i, j, pivot, temp;
+        if (start < end) {
+            //initialization choose first element as pivot element
+            i = start;
+            j = end;
+            pivot = i;
+
+            while (i < j) {
+                //checking left side of pivot element is less than it. if so,increment i
+                //i is incrementing so we check it should not exceed length of array/last element
+                while (array[i] < array[pivot] && i <= end) {
+                    i++;
+                }
+                //checking right side of pivot element is greater than it. if so,decrement j
+                //i is decrementing so we check it should not go beyond index 0/first element
+                while (array[j] > array[pivot] && j >= 0) {
+                    j--;
+                }
+                //if any one while fails, we swap the i th and j th element.
+                if (i < j) {
+                    int t = array[i];
+                    array[i] = array[j];
+                    array[j] = t;
+                }
+            }
+            //swaping pivot element
+            temp = array[j];
+            array[j] = array[pivot];
+            array[pivot] = temp;
+            sort(array, start, j - 1);  //sub array b4 pivot element
+            sort(array, j + 1, end); //sub array after pivot element
+        }
+    }
+}

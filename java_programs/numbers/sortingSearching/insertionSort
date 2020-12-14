@@ -1,0 +1,33 @@
+package numbers.searchingSorting;
+import java.util.Scanner;
+public class InsertionSort
+{
+    public static void main(String[] args)
+    {
+        {
+            InsertionSort insertionSort=new InsertionSort();
+            Scanner scanner=new Scanner(System.in);
+            int array[]={2,4,6,8,10,1,3,9,7,5};
+            int n=array.length;
+            insertionSort.sort(array,n);
+        }
+    }
+    void sort(int array[],int n)
+    {
+        int i,j,t;
+        for(i=1;i<n;i++)           // i should begin with 1 to compare b4 elements in next loop
+        {
+            for(j=0;j<i;j++)
+            {
+                if(array[i]<array[j])     
+                {
+                    t=array[i];
+                    array[i]=array[j];
+                    array[j]=t;
+                }
+            }
+        }
+        for(int z:array)
+            System.out.println(z);
+    }
+}
