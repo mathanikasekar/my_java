@@ -1,3 +1,16 @@
+ADVANCED FOR LOOP:
+ syn:
+  for(datatype variable : arrayName)
+  {
+  System.out.println(variable);
+  }
+
+
+
+
+
+
+
 package learnings;
 
 import java.util.*;
@@ -11,5 +24,31 @@ public class ForEachExample {
         {
             System.out.println(ss);
         }
+    }
+}
+
+package numbers.searchingSorting;
+import java.io.*;
+import java.util.*;
+public class AdvancedForLoop
+ {
+    public static void main(String[] args)
+     {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter no of elements");
+        int n=scanner.nextInt();
+
+        //declare array
+        int myArray[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Enter elements");
+            //getting i/p
+            myArray[i]=scanner.nextInt();
+        }
+
+        //displaying
+        for(int i:myArray)
+            System.out.println(i);
     }
 }

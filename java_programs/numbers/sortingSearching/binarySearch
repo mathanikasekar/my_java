@@ -42,6 +42,7 @@ search(array,0,9,7)
  key > a[mid]
  so else part is considered
 
+
  likewise goes on..
  mid    l     h
  4      5     9
