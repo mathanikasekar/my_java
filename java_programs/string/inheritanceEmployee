@@ -1,0 +1,57 @@
+package string;
+
+import java.util.*;
+import java.io.*;
+public class Employee   //base class
+{
+    String name;
+    String desg;
+    void fun1()       //base class function to get input
+    {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter employee name and designation");
+        name=scanner.next();
+        desg=scanner.next();
+    }
+    void showDetails() //it is specified in question to ovverride this method in derived class.
+    // so we created a method in baseclass to achieve overriding
+    {
+        System.out.println("Employee name : " + name);
+        System.out.println("Employee designation : " + desg);
+    }
+}
+
+    class Manager extends Employee     //derieved class with base class extended
+    {
+        String dept;
+        void fun2()                    //derieved class function to get input
+        {
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Enter employee department");
+            dept=scanner.next();
+        }
+        /*constructor : function name should be same as class name
+         parameterised constructor : function name should be same as class name with function parameter */
+
+        void manager(String dept)       //parameterised constructor
+       {
+           dept=dept;
+       }
+           void showDetails()           //method over riding
+           {
+           System.out.println("Employee name : " + name);
+           System.out.println("Employee designation : " + desg);
+           System.out.println("Employee department : " + dept);
+           }
+    }
+    class Main           //main class
+    {
+        public static void main(String args[])
+        {
+          Manager manager=new Manager();  /*object created for derieved class is enough to access members
+             of both base class and derieved class */
+          manager.fun1();
+          manager.fun2();
+          manager.showDetails();
+        }
+    }
