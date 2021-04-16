@@ -1,3 +1,5 @@
+// inheritance example
+
 package string;
 
 import java.util.*;
@@ -13,7 +15,7 @@ public class Employee   //base class
         name=scanner.next();
         desg=scanner.next();
     }
-    void showDetails() //it is specified in question to ovverride this method in derived class.
+    void showDetails() //it is specified in question to override this method in derived class.
     // so we created a method in baseclass to achieve overriding
     {
         System.out.println("Employee name : " + name);
